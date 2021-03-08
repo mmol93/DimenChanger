@@ -13,7 +13,7 @@ line = f.readline()
 # 모드 선택(xxhdpi가 1 = 기준)
 ldpi = 4
 mdpi = 3
-hdpi = 2
+hdpi = 1.5
 xhdpi = 1.5
 xxxhdpi = 0.75
 
@@ -39,7 +39,7 @@ while line:
         text2 = text[-11:]
 
         # 해상도에 맞게 숫자 부분만 변경
-        changedDimension = round(int(dimension) / xxxhdpi)
+        changedDimension = round(int(dimension) / hdpi)
 
         # 텍스트 조합을 하여 환성된 문장을 생성
         changedLine = text1 + str(changedDimension) + text2
